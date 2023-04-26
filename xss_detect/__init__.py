@@ -1,0 +1,1 @@
+from xss_detect import xss_detector
