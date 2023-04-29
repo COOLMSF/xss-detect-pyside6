@@ -19,7 +19,8 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
     QHBoxLayout, QLabel, QLineEdit, QMainWindow,
     QPlainTextEdit, QPushButton, QScrollArea, QSizePolicy,
     QStackedWidget, QTextEdit, QVBoxLayout, QWidget)
-import sys, os
+import sys,os
+
 sys.path.append(os.getcwd() + "/modules")
 import resources_rc
 
@@ -1043,6 +1044,14 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.le_url, 0, 0, 1, 1)
 
+        self.labelVersion_3 = QLabel(self.frame_content_wid_1)
+        self.labelVersion_3.setObjectName(u"labelVersion_3")
+        self.labelVersion_3.setStyleSheet(u"color: rgb(113, 126, 149);")
+        self.labelVersion_3.setLineWidth(1)
+        self.labelVersion_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.gridLayout.addWidget(self.labelVersion_3, 1, 0, 1, 2)
+
         self.btn_start = QPushButton(self.frame_content_wid_1)
         self.btn_start.setObjectName(u"btn_start")
         self.btn_start.setMinimumSize(QSize(150, 30))
@@ -1054,14 +1063,6 @@ class Ui_MainWindow(object):
         self.btn_start.setIcon(icon3)
 
         self.gridLayout.addWidget(self.btn_start, 0, 1, 1, 1)
-
-        self.labelVersion_3 = QLabel(self.frame_content_wid_1)
-        self.labelVersion_3.setObjectName(u"labelVersion_3")
-        self.labelVersion_3.setStyleSheet(u"color: rgb(113, 126, 149);")
-        self.labelVersion_3.setLineWidth(1)
-        self.labelVersion_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.gridLayout.addWidget(self.labelVersion_3, 1, 0, 1, 2)
 
 
         self.horizontalLayout_9.addLayout(self.gridLayout)
@@ -1110,7 +1111,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1022, 224))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 994, 224))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
@@ -1160,6 +1161,13 @@ class Ui_MainWindow(object):
         self.te_xss_protect_result.setObjectName(u"te_xss_protect_result")
 
         self.horizontalLayout_12.addWidget(self.te_xss_protect_result)
+
+        self.btn_protect = QPushButton(self.row_3)
+        self.btn_protect.setObjectName(u"btn_protect")
+        self.btn_protect.setMaximumSize(QSize(61, 16777215))
+        self.btn_protect.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+
+        self.horizontalLayout_12.addWidget(self.btn_protect)
 
 
         self.verticalLayout.addWidget(self.row_3)
@@ -1371,13 +1379,14 @@ class Ui_MainWindow(object):
         self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"FILE BOX", None))
         self.le_url.setText(QCoreApplication.translate("MainWindow", u"URL", None))
         self.le_url.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
-        self.btn_start.setText(QCoreApplication.translate("MainWindow", u"\u5f00\u59cb\u68c0\u6d4b", None))
         self.labelVersion_3.setText(QCoreApplication.translate("MainWindow", u"Label description", None))
+        self.btn_start.setText(QCoreApplication.translate("MainWindow", u"\u5f00\u59cb\u68c0\u6d4b", None))
         self.cm_choice.setItemText(0, QCoreApplication.translate("MainWindow", u"xss\u68c0\u6d4b\u6a21\u5f0f", None))
         self.cm_choice.setItemText(1, QCoreApplication.translate("MainWindow", u"xss\u9632\u5fa1\u6a21\u5f0f", None))
 
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"xss\u68c0\u6d4b\u7ed3\u679c", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"xss\u9632\u5fa1\u7ed3\u679c", None))
+        self.btn_protect.setText(QCoreApplication.translate("MainWindow", u"\u5f00\u59cb\u9632\u5fa1", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"NEW PAGE TEST", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))

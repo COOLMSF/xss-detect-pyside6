@@ -1,0 +1,21 @@
+Serching for XSSs in [92mhttps://xss-game.appspot.com/level1/frame?query=aaaa&pepe=jose[0m
+Serching for XSSs in [92mhttps://xss-game.appspot.com/static/game-frame.js[0m
+[93mquery[0m could be vulnerable because its value was reflected.
+[92mhttps://xss-game.appspot.com/level1/frame?query=aaaa&pepe=jose[0m is vulnerable to XSS! query param [94mquery[0m is injectable
+HTTPSConnectionPool(host='xss-game.appspot.com', port=443): Max retries exceeded with url: /static/game-frame.js (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(54, 'Connection reset by peer')))
+Serching for XSSs in [92mhttps://xss-game.appspot.com/static/game-frame-styles.css[0m
+Serching for XSSs in [92mhttps://xss-game.appspot.com/static/logos/level1.png[0m
+'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte
+Serching for XSSs in [92mhttps://xss-game.appspot.com?[0m
+Serching for XSSs in [92mhttps://xss-game.appspot.com/static/game.css[0m
+HTTPSConnectionPool(host='xss-game.appspot.com', port=443): Max retries exceeded with url: /static/game.css (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(54, 'Connection reset by peer')))
+Serching for XSSs in [92mhttps://xss-game.appspot.com/static/game.js[0m
+HTTPSConnectionPool(host='xss-game.appspot.com', port=443): Max retries exceeded with url: /static/game.js (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(54, 'Connection reset by peer')))
+Serching for XSSs in [92mhttps://xss-game.appspot.com/level1[0m
+Serching for XSSs in [92mhttps://xss-game.appspot.com/level2[0m
+Serching for XSSs in [92mhttps://xss-game.appspot.com/level1/frame[0m
+HTTPSConnectionPool(host='xss-game.appspot.com', port=443): Max retries exceeded with url: /level1/frame (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(54, 'Connection reset by peer')))
+Serching for XSSs in [92mhttps://xss-game.appspot.com#[0m
+Serching for XSSs in [92mhttps://xss-game.appspot.com/level1/source[0m
+HTTPSConnectionPool(host='xss-game.appspot.com', port=443): Max retries exceeded with url: /level1/source (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(54, 'Connection reset by peer')))
+We where unable to store the found XSS in the DB: no such table: xss

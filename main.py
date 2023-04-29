@@ -17,6 +17,7 @@
 import sys
 import os
 import platform
+import time
 
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
@@ -45,11 +46,11 @@ class MainWindow(QMainWindow):
 
         # APP NAME
         # ///////////////////////////////////////////////////////////////
-        title = "PyDracula - Modern GUI"
-        description = "PyDracula APP - Theme with colors based on Dracula for Python."
+        # title = "PyDracula - Modern GUI"
+        # description = "PyDracula APP - Theme with colors based on Dracula for Python."
         # APPLY TEXTS
-        self.setWindowTitle(title)
-        widgets.titleRightInfo.setText(description)
+        # self.setWindowTitle(title)
+        # widgets.titleRightInfo.setText(description)
 
         # TOGGLE MENU
         # ///////////////////////////////////////////////////////////////
@@ -97,6 +98,8 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
+        
+        self.ui.btn_start.clicked.connect(self.btn_start_clicked)
 
 
     # BUTTONS CLICK
@@ -130,6 +133,29 @@ class MainWindow(QMainWindow):
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
+
+    def btn_start_clicked(self):
+        box = QMessageBox()
+        box.setText("正在检测，请耐心等待")
+        box.setWindowTitle("正在检测")
+        box.exec()
+        url = self.ui.le_url.text()
+        # print("URL: " + url)
+        
+        # os.chdir("xss_detect/")
+        # os.system("python3 xss_detector.py --url " + url + " 1>&2 > result.txt")
+        # time.sleep(30)
+        
+        b1 = QMessageBox()
+        b1.setText(os.getcwd())
+        b1.exec()
+        
+        f = open("/Users/coolder/Git/xss-detector/xss_detect/result.txt", "r")
+        data = f.read()
+        # box = QMessageBox()
+        # box.setText(data)
+        # box.exec()
+        self.ui.te_xss_detect_result.setPlainText(data)
 
 
     # RESIZE EVENTS
